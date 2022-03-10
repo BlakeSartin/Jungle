@@ -1,0 +1,25 @@
+<section class="admin-dashboard-index">
+  <header class="page-header">
+    <h1>Admin &raquo; Products & Categories</h1>
+  </header>
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th> <%= link_to "Product", "/admin/products" %>  Qauntity </th>
+          <th><%= link_to "Category", "/admin/categories"%>  Quantity </th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td><%=@product_count %></td>
+      <td><%=@category_count %></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</section>
+
