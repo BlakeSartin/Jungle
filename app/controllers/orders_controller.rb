@@ -2,6 +2,11 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+   @line_items = LineItem.joins(:product).where("order_id" => @order.id) 
+   @total = 0
+   @line_items.each do |item| 
+    @total = @total + item.total_price_cents
+   end
   end
 
   def create
