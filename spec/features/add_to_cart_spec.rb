@@ -17,15 +17,21 @@ RSpec.feature "users can navigate from the home page to the product detail page 
     end
   end
 
-  scenario "They are able to see all of the products" do
+  scenario "They are able to add to cart and cart increases by 1" do
+
     #ACT
     visit root_path
 
-    # DEBUG / VERIFY
+    expect(page).to have_content('My Cart (0)')
 
-    first('a.btn.btn-default').click
+     # DEBUG / VERIFY
 
-    save_screenshot
-    expect(page).to have_content 'Apparel'
+     first('.product').click_on('Add')
+   
+     expect(page).to have_content("My Cart (1)")
+
+     save_screenshot
+
   end
 end
+
