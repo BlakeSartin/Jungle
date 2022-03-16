@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+Jungle is a mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Jungle has been built to allow users to view categories and products. Users can see product details including price, img, and descriptions! Users can add items to their cart and checkout using Stripe fake credit card. This app also includes admin functions only accesible to admin logins, inlcuding product and category creaters.
 
 ## Additional Steps for Apple M1 Machines
 
